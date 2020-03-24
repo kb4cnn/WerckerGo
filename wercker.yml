@@ -39,7 +39,7 @@ build:
         code: |
           until $(curl --output /dev/null --silent --head --fail http://testcontainer:5000); do printf '.'; sleep 5; done
           
-    -script
+    - script
         name: Test the container that we started using docker-run
         code: |
             if curlOutput=`curl -s testcontainer:5000`; then
