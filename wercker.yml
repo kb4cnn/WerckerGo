@@ -44,7 +44,7 @@ build:
         code: |
             if curlOutput=`curl -s testcontainer:5000`; then
                 export expected="Hello World!!!"
-                if [ "curlOutput" == "$expected" ]; then
+                if [ "$curlOutput" == "$expected" ]; then
                     echo "Test passed: container gave expected response: " $expected
                 else
                     echo "Test failed: container gave unexpected response: " $curlOutput
