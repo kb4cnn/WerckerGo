@@ -27,7 +27,7 @@ build:
           docker build -t docker.io/$USERNAME/direct-docker-golang:latest .
           echo running docker images
           docker images
-    - script:
+    - script
         name: start the newly-created image using docker run
         code: |
           docker run --rm -d -p 5000:5000 --name testcontainer \
